@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand">Blog do Node</a>
+    <div class="d-flex">
+      <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item active">
+          <a href="/" class="nav-link mx-2">
+            Home <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/categorias" class="nav-link mx-2">Categorias</a>
+        </li>
+
+        {{#if user}}
+        <li class="nav-item">
+          <a href="/usuarios/logout" class="nav-link mx-2">Sair</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a href="/usuarios/login" class="nav-link mx-2">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="/usuarios/registro" class="nav-link mx-2">Registro</a>
+        </li>
+
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
